@@ -11,9 +11,8 @@
 
       $link = getConnection();
    
-    $query = "insert into tb_enderecos values('{$cep}', '{$logradouro}', '{$bairro}', '{$cidade}', '{$estado}', '{$complemento}')";
-    echo $query;
-    exit;
+    $query = "insert into tb_enderecos values(null, '{$cep}', '{$logradouro}', '{$bairro}', '{$cidade}', '{$estado}', '{$complemento}')";
+
     try {
         mysqli_query($link, $query);
         return true;
